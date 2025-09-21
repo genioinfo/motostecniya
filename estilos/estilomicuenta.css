@@ -1,0 +1,161 @@
+body {
+  width: 80vw;
+  margin:0px auto;
+  background-color:lightslategrey;
+  background-size: 100px;
+  
+}
+/* header{
+   
+   min-height: 10vw;
+}*/
+.encabezado {
+  height: 6vw;
+  background-color: #8C3535;
+  box-shadow: #262525;
+  border-radius: 10px;
+  
+  font-family: 'Montserrat','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #F2F2F2;
+  stroke-width: 10px;
+  position: relative;
+  
+}
+.encabezado img {
+  position: absolute;
+  float: left;
+  width: 8vw;
+  margin-top: 0.2em;
+  margin-left: 0.2em;
+  border-radius: 4px;
+  
+}
+
+.encabezado h1 {
+  font-size: 3vw;
+  position: relative;
+  text-shadow: darkgrey;
+  text-align: center;
+  padding-top: 0.4em;
+  vertical-align: middle;
+  
+}
+nav {
+  height: 2.5em;
+  background: #F27979;
+  stroke-width: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+nav li {
+  list-style-type: none;
+  color: cornsilk;
+  
+}
+header nav a{
+  text-decoration: none;
+  font-size: 1.1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #f2f2f2;
+  float: left;
+  width: 22%;
+  text-align: center;
+  padding: 10px;
+  display: block;
+  position: relative;
+}
+
+header nav a:hover {
+  background:#F24B4B;
+  font-size: 1.2em;
+}
+
+header div a {
+  text-decoration: none;
+
+}
+
+header div a:link {
+  text-decoration: none;
+}
+
+header div a:visited {
+  text-decoration: none;
+  color: #F2F2F2;
+}
+section {
+  display: inline-block;
+  background: #F27979;
+  border-radius: 8px;
+  padding: 0.5em;
+}
+footer {
+  clear: both;
+  text-align: center;
+  background: #8C3535;
+  border-radius: 8px;
+  color: #F2F2F2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+}
+
+section img {
+  margin: auto;
+  display: block;
+}
+
+section img {
+  width: 30%;
+  float: left;
+  padding-right: 1em;
+}
+
+article {
+  display: inline-block;
+}
+  .contenedor h1{
+  font-family: 'Rubik', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:#b0abaa;
+  font-size: 2em;  	
+  }
+  
+  .contenedor{
+    padding-top: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-color: rgb(60,60,80,60);
+      border-radius: 30px;
+      margin: 0 auto;
+      margin-top: 70px;
+      
+  }
+  
+    
+  input[type="text"],input[type="password"]{
+  
+  width: 140px;
+  height: 30px;
+  font-size: 16;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #f0ebea;
+  padding-left: 40px;
+  border-radius: 10px;
+  }
+  
+  [type='submit'] {
+    width: 120px;
+      height: 30px;	
+    color: white;
+    background-color: #8C3535;
+    font-weight: 600;
+  }

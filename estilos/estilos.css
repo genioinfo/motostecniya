@@ -1,0 +1,124 @@
+body {
+    width: 80vw;
+    margin:0px auto;
+    background-color:lightslategrey;
+    background-size: 100px;
+    
+}
+/* header{
+     
+     min-height: 10vw;
+ }*/
+.encabezado {
+    height: 6vw;
+    background-color: #8C3535;
+    box-shadow: #262525;
+    border-radius: 10px;
+    
+    font-family: 'Montserrat','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #F2F2F2;
+    stroke-width: 10px;
+    position: relative;
+    
+}
+.encabezado img {
+    position: absolute;
+    float: left;
+    width: 8vw;
+    margin-top: 0.2em;
+    margin-left: 0.2em;
+    border-radius: 4px;
+    
+}
+
+.encabezado h1 {
+    font-size: 3vw;
+    position: relative;
+    text-shadow: darkgrey;
+    text-align: center;
+    padding-top: 0.4em;
+    vertical-align: middle;
+    
+}
+nav {
+    height: 2.5em;
+    background: #F27979;
+    stroke-width: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+nav li {
+    list-style-type: none;
+    color: cornsilk;
+    
+}
+header nav a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f2f2f2;
+    float: left;
+    width: 22%;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+header nav a:hover {
+    background:#F24B4B;
+    font-size: 1.2em;
+}
+
+section {
+    display: inline-block;
+    background: #F27979;
+    border-radius: 8px;
+    padding: 0.5em;
+}
+footer {
+    clear: both;
+    text-align: center;
+    background: #8C3535;
+    border-radius: 8px;
+    color: #F2F2F2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Rubik', sans-serif;
+}
+
+section img {
+    margin: auto;
+    display: block;
+    width: 95%;
+  }
+
+
+
+/* Color Theme Swatches in Hex */
+.Rojo-Negro-Motos-Tecni-Ya-1-hex { color: #F24B4B; }
+.Rojo-Negro-Motos-Tecni-Ya-2-hex { color: #8C3535; }
+.Rojo-Negro-Motos-Tecni-Ya-3-hex { color: #F27979; }
+.Rojo-Negro-Motos-Tecni-Ya-4-hex { color: #262525; }
+.Rojo-Negro-Motos-Tecni-Ya-5-hex { color: #F2F2F2; }
+
+/* Color Theme Swatches in RGBA */
+.Rojo-Negro-Motos-Tecni-Ya-1-rgba { color: rgba(242, 75, 75, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-2-rgba { color: rgba(140, 53, 53, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-3-rgba { color: rgba(242, 121, 121, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-4-rgba { color: rgba(38, 37, 37, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-5-rgba { color: rgba(242, 242, 242, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Rojo-Negro-Motos-Tecni-Ya-1-hsla { color: hsla(0, 86, 62, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-2-hsla { color: hsla(0, 45, 37, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-3-hsla { color: hsla(0, 82, 71, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-4-hsla { color: hsla(0, 1, 14, 1); }
+.Rojo-Negro-Motos-Tecni-Ya-5-hsla { color: hsla(0, 0, 94, 1); }
