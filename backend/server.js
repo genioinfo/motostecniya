@@ -17,6 +17,12 @@ app.use(express.json());
 let pool;
 
 async function initializeDatabase() {
+  console.log('DB config:', {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+  });
   try {
     // Primero crear la base de datos si no existe
     const tempPool = mysql.createPool({

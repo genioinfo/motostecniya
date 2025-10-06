@@ -27,14 +27,17 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tblcliente`
 --
 
-CREATE TABLE `tblcliente` (
-  `CliCedula` int(15) NOT NULL,
-  `CliNombre` varchar(40) NOT NULL,
-  `CliApellido` varchar(40) NOT NULL,
-  `CliTelefono` int(12) NOT NULL,
-  `CliCorreo` varchar(60) NOT NULL,
-  `CliPlaMoto` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+DROP TABLE IF EXISTS tblcliente;
+
+CREATE TABLE tblcliente (
+  Id INT PRIMARY KEY AUTO_INCREMENT,
+  Nombre VARCHAR(100) NOT NULL,
+  Apellido VARCHAR(100) NOT NULL,
+  Telefono VARCHAR(20),
+  Correo VARCHAR(100) UNIQUE NOT NULL,
+  Password VARCHAR(255) NOT NULL,
+  FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 -- --------------------------------------------------------
 
@@ -55,14 +58,17 @@ CREATE TABLE `tblmantenimiento` (
 -- Estructura de tabla para la tabla `tblmecanicoaux`
 --
 
-CREATE TABLE `tblmecanicoaux` (
-  `AuxCedula` int(15) NOT NULL,
-  `AuxNombre` varchar(60) NOT NULL,
-  `AuxApellido` varchar(60) NOT NULL,
-  `AuxTelefono` int(12) NOT NULL,
-  `AuxCorreo` varchar(60) NOT NULL,
-  `AuxPassword` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+DROP TABLE IF EXISTS tblmecanicoaux;
+
+CREATE TABLE tblmecanicoaux (
+  Cedula INT PRIMARY KEY,
+  Nombre VARCHAR(100) NOT NULL,
+  Apellido VARCHAR(100) NOT NULL,
+  Telefono VARCHAR(20),
+  Correo VARCHAR(100) UNIQUE NOT NULL,
+  Password VARCHAR(255) NOT NULL,
+  FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 -- --------------------------------------------------------
 

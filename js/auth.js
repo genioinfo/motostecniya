@@ -1,11 +1,8 @@
 // Función para manejar el inicio de sesión
 async function handleLogin(event) {
   event.preventDefault();
-  console.log('Intentando iniciar sesión...');
-  
   const email = document.getElementById('email').value;
   const contrasena = document.getElementById('contrasena').value;
-  
   try {
     const response = await fetch('http://localhost:3000/api/auth/login', {
       method: 'POST',
@@ -14,47 +11,27 @@ async function handleLogin(event) {
       },
       body: JSON.stringify({ email, contrasena })
     });
-
     const data = await response.json();
-    
     if (response.ok) {
-      console.log('Login exitoso:', data);
-      // Guardar el token en localStorage
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
-      
-      // Redirigir según el tipo de usuario
-      console.log('Usuario autenticado:', data.user);
-      if (data.user.type === 'mecanico') {
-        window.location.href = './mecanico.html';
-      } else {
-        window.location.href = './dashboard.html';
-      }
+      window.location.href = 'dashboard.html';
     } else {
-      alert(data.message || 'Error al iniciar sesión');
+      alert(data.message || 'Credenciales incorrectas o usuario no encontrado');
     }
   } catch (error) {
-    console.error('Error detallado:', error);
-    if (error.message.includes('Failed to fetch')) {
-      alert('Error al conectar con el servidor. Asegúrate de que el servidor backend esté ejecutándose en http://localhost:3000');
-    } else {
-      alert('Error al iniciar sesión: ' + error.message);
-    }
+    alert('No se pudo conectar con el servidor. Verifica la conexión.');
   }
 }
 
 // Función para manejar el registro de clientes
 async function handleRegister(event) {
   event.preventDefault();
-  
   const email = document.getElementById('email').value;
   const contrasena = document.getElementById('contrasena').value;
   const nombre = document.getElementById('nombre')?.value;
   const apellido = document.getElementById('apellido')?.value;
   const telefono = document.getElementById('telefono')?.value;
-
-  console.log('Intentando registrar usuario:', { email, nombre, apellido, telefono });
-  
   try {
     const response = await fetch('http://localhost:3000/api/auth/register', {
       method: 'POST',
@@ -69,63 +46,19 @@ async function handleRegister(event) {
         telefono: telefono || ''
       })
     });
-
     const data = await response.json();
-    
     if (response.ok) {
-      // Guardar el token en localStorage
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
-      window.location.href = './dashboard.html';
+  window.location.href = 'dashboard.html';
     } else {
-      alert(data.message || 'Error al registrar usuario');
+      alert(data.message || 'No se pudo registrar el usuario');
     }
   } catch (error) {
-    console.error('Error detallado:', error);
-    if (error.message.includes('Failed to fetch')) {
-      alert('Error al conectar con el servidor. Asegúrate de que el servidor backend esté ejecutándose en http://localhost:3000');
-    } else {
-      alert('Error al registrar usuario: ' + error.message);
-    }
+    alert('No se pudo conectar con el servidor. Verifica la conexión.');
   }
-}
-  event.preventDefault();
-  
-  const email = document.getElementById('email').value;
-  const contrasena = document.getElementById('contrasena').value;
-  
-  try {
-    const response = await fetch('http://localhost:3000/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email, contrasena })
-    });
-
-    const data = await response.json();
-    
-    if (response.ok) {
-      // Guardar el token en localStorage
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
-      
-      // Redirigir según el tipo de usuario
-      if (data.user.type === 'mecanico') {
-        window.location.href = '/mecanico.html';
-      } else {
-        window.location.href = '/dashboard.html';
-      }
-    } else {
-      alert(data.message || 'Error al iniciar sesión');
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Error al conectar con el servidor');
-    console.error('Error:', error);
-    alert('Error al conectar con el servidor');
-  }
-}
+  } // Closing brace added here
+// ...existing code...
 
 // Función para cerrar sesión
 function logout() {
@@ -184,3 +117,15 @@ setInterval(async () => {
     await refreshToken();
   }
 }, 23 * 60 * 60 * 1000); // 23 horas en milisegundos
+
+// Agregar listeners si el DOM tiene los formularios
+document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('loginForm');
+  if (loginForm) {
+    loginForm.addEventListener('submit', handleLogin);
+  }
+  const registerForm = document.getElementById('registerForm');
+  if (registerForm) {
+    registerForm.addEventListener('submit', handleRegister);
+  }
+});

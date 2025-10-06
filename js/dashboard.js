@@ -1,7 +1,7 @@
 // Verificar si el usuario está autenticado
 document.addEventListener('DOMContentLoaded', function() {
     if (!isAuthenticated()) {
-        window.location.href = '/micuenta.html';
+        window.location.href = 'micuenta.html';
         return;
     }
 
