@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel de control - Motos Tecni YA">
+    <title>Dashboard - Motos Tecni YA</title>
+    <link rel="shortcut icon" href="imagenes/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/dashboard.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="imagenes/LogoMotosTecniya.png" alt="LogoMotosTecniya">
+                <h1>MOTOS TECNI YA</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#citas">Mis Citas</a></li>
+                    <li><a href="#perfil">Mi Perfil</a></li>
+                    <li><button onclick="logout()" class="logout-btn">Cerrar Sesión</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h2>Bienvenido, <span id="userName">Usuario</span></h2>
+            <p>¿Qué te gustaría hacer hoy?</p>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card">
+                <img src="imagenes/herramientas.svg" alt="Revisión Técnico-Mecánica">
+                <h3>Revisión Técnico-Mecánica</h3>
+                <p>Desde $45,000</p>
+                <ul>
+                    <li>Inspección completa</li>
+                    <li>Duración: 45 minutos</li>
+                    <li>Certificado digital</li>
+                </ul>
+                <button class="agendar-btn">Agendar Servicio</button>
+            </div>
+
+            <div class="service-card">
+                <img src="imagenes/herramientas.svg" alt="Mantenimiento Preventivo">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Desde $80,000</p>
+                <ul>
+                    <li>Cambio de aceite y filtro</li>
+                    <li>Duración: 2 horas</li>
+                    <li>Revisión completa</li>
+                </ul>
+                <button class="agendar-btn">Agendar Servicio</button>
+            </div>
+
+            <div class="service-card">
+                <img src="imagenes/herramientas.svg" alt="Cambio de Aceite Express">
+                <h3>Cambio de Aceite Express</h3>
+                <p>Desde $35,000</p>
+                <ul>
+                    <li>Aceite sintético o mineral</li>
+                    <li>Duración: 30 minutos</li>
+                    <li>Servicio rápido</li>
+                </ul>
+                <button class="agendar-btn">Agendar Servicio</button>
+            </div>
+        </section>
+
+        <section class="appointments-section">
+            <h2>Mis Próximas Citas</h2>
+            <div id="appointments-list">
+                <!-- Las citas se cargarán dinámicamente aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Av. Carrera 86 #87-61, Bogotá (Colombia)</p>
+                <p>miguel@motostecniya.com.co</p>
+                <p>Celular: 311 267 3255</p>
+            </div>
+            <div class="business-hours">
+                <h4>Horario</h4>
+                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                <p>Sábados: 8:00 AM - 2:00 PM</p>
+                <p>Domingos: Cerrado</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

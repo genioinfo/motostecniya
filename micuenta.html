@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos/estilomicuenta.css">
   <script src="js/password-toggle.js" defer></script>
+  <script src="js/auth.js" defer></script>
 </head>
 
 <body>
@@ -50,7 +51,7 @@
       <span>o</span>
     </div>
 
-    <form action="inicioSesion.php" method="POST">
+    <form id="loginForm" onsubmit="handleLogin(event)">
       <div class="form-group">
         <label for="email">Dirección de email</label>
         <input type="email" name="email" id="email" required>
