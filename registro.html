@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Taller de motocicletas Avenida Cali, Bogotá, Miguel Angel Carreño. Experiencia en alistamiento de motocicletas para la revisión tecnicomecánica">
+    <meta name="keywords" content="taller, motos, tecnicomecanica, Bogotá, Miguel Angel Carreño,">
+    <title>Motos Tecni YA</title>
+    <link rel="shortcut icon" href="imagenes/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilomicuenta.css">
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <a href="index.html"><img src="imagenes/LogoMotosTecniya.png" alt="LogoMotosTecniya">
+                <h1>MOTOS TECNI YA</h1>
+            </a>
+        </div>
+
+    </header>
+
+    <div class="contenedor">
+        <h1>Regístrate</h1>
+
+        <div class="social-buttons">
+            <button class="google-btn">
+                <img src="imagenes/google-icon.png" alt="Google">
+                Google
+            </button>
+        </div>
+
+        <div class="separator">
+            <span>o</span>
+        </div>
+
+        <form action="registroCliente.php" method="POST">
+            <div class="form-group">
+                <label for="email">Dirección de email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <div class="password-input">
+                    <input type="password" name="contrasena" id="contrasena" required>
+                    <span class="eye-icon">👁</span>
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn">Regístrate</button>
+
+            <div class="account-links">
+                <p>¿Ya tienes una cuenta? <a href="micuenta.html">Inicia sesión</a></p>
+            </div>
+
+            <div class="legal">
+                <small>
+                    Al continuar, aceptas nuestros <a href="#">Términos de servicio</a> y confirmas que has leído
+                    nuestra
+                    <a href="#">Política de privacidad</a>.
+                </small>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p><small>Av. Carrera 86 #87-61, Bogotá (colombia)</small></p>
+        <small>miguel@motostecniya.com.co</small>
+        <small>Celular: 3112673255</small>
+    </footer>
+</body>
+
+</html>
